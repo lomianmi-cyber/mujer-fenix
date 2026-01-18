@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mujer Fénix — transformación emocional, trabajo con la sombra y liderazgo." />
+  <title>Mujer Fénix</title>
+  <style>
+    :root{
+      --bg:#0b0b10;
+      --card:#12121a;
+      --text:#f3f3f5;
+      --muted:#b6b6c3;
+      --line:#232334;
+      --accent:#f1c76a; /* dorado suave */
+      --shadow: 0 10px 30px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 980px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(241,199,106,.15), transparent 55%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(241,199,106,.10), transparent 55%),
+                  linear-gradient(180deg, #07070b, var(--bg));
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px;}
+    header{
+      position:sticky; top:0;
+      backdrop-filter: blur(10px);
+      background: rgba(11,11,16,.65);
+      border-bottom:1px solid rgba(35,35,52,.7);
+      z-index:10;
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none;
+    }
+    .seal{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(241,199,106,.25), rgba(241,199,106,.08));
+      border:1px solid rgba(241,199,106,.35);
+      display:grid; place-items:center;
+      box-shadow: var(--shadow);
+    }
+    .seal svg{opacity:.9}
+    .brand strong{letter-spacing:.4px}
+    .links{display:flex; gap:14px; flex-wrap:wrap;}
+    .links a{
+      text-decoration:none;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+    }
+    .links a:hover{color:var(--text); border-color:rgba(241,199,106,.25); background:rgba(241,199,106,.06)}
+
+    .hero{padding:52px 0 18px;}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 860px){
+      .hero-grid{grid-template-columns:1fr;}
+    }
+
+    .card{
+      background: rgba(18,18,26,.78);
+      border:1px solid rgba(35,35,52,.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .pad{padding:22px;}
+
+    h1{margin:0 0 10px; font-size: clamp(30px, 4vw, 44px); line-height:1.08; letter-spacing:-.6px;}
+    .sub{color:var(--muted); margin:0 0 18px; font-size: 16px;}
+    .pill-row{display:flex; gap:10px; flex-wrap:wrap; margin:16px 0 0;}
+    .pill{
+      font-size:13px;
+      color: rgba(243,243,245,.9);
+      border:1px solid rgba(241,199,106,.22);
+      background: rgba(241,199,106,.06);
+      border-radius:999px;
+      padding:7px 10px;
+    }
+
+    .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:11px 14px;
+      border-radius:14px;
+      border:1px solid rgba(241,199,106,.35);
+      background: linear-gradient(135deg, rgba(241,199,106,.20), rgba(241,199,106,.08));
+      text-decoration:none;
+      font-weight:600;
+    }
+    .btn:hover{filter:brightness(1.05)}
+    .btn.secondary{
+      border-color: rgba(35,35,52,.9);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+    }
+    .btn.secondary:hover{color:var(--text); border-color:rgba(241,199,106,.22)}
+
+    .side h2{margin:0 0 10px; font-size:18px;}
+    .side p{margin:0; color:var(--muted);}
+    .side ul{margin:14px 0 0; padding-left:18px; color:var(--muted)}
+    .side li{margin:8px 0}
+
+    section{padding:16px 0;}
+    .grid-3{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px;}
+    @media (max-width: 860px){
+      .grid-3{grid-template-columns:1fr;}
+    }
+    .mini h3{margin:0 0 8px; font-size:16px;}
+    .mini p{margin:0; color:var(--muted)}
+
+    .quote{
+      border-left:3px solid rgba(241,199,106,.45);
+      padding-left:14px;
+      color: rgba(243,243,245,.92);
+      margin:0;
+    }
+    .quote span{display:block; color:var(--muted); margin-top:8px; font-size:13px}
+
+    form{display:grid; gap:10px;}
+    label{font-size:13px; color:var(--muted)}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(35,35,52,.9);
+      background: rgba(0,0,0,.18);
+      color:var(--text);
+      outline:none;
+    }
+    input:focus, textarea:focus{border-color: rgba(241,199,106,.35)}
+    textarea{min-height:110px; resize:vertical;}
+
+    footer{
+      padding:30px 0 50px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top:1px solid rgba(35,35,52,.7);
+      margin-top:18px;
+    }
+    .small{font-size:12px; color:var(--muted)}
+
+    /* Pequeña animación del sello */
+    @media (prefers-reduced-motion: no-preference){
+      .seal{transform: translateZ(0);}
+      .seal:hover{animation: float 1.4s ease-in-out infinite alternate;}
+      @keyframes float{from{transform:translateY(0)} to{transform:translateY(-3px)}}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="brand" href="#inicio">
+          <span class="seal" aria-hidden="true">
+            <!-- Sello Fénix minimal (sin simbología brujeril) -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2c1.6 2.1 2.6 4.1 2.6 6.2 0 1.6-.6 3.1-1.5 4.4 2.9-1 5.3-3.1 6.9-6.1.7 2 .9 3.7.9 5.4 0 5.7-4 9.9-8.9 10.1V20c3.3-.4 5.7-3.3 5.2-6.6-.2-1.2-.7-2.2-1.5-3.1-.1 2-1.3 3.8-3.1 4.7-.9.4-1.8.6-2.7.6-1.9 0-3.6-.8-4.8-2.1.2 4.3 3.7 7.8 8 7.8 0 .2 0 .4-.1.7C6.9 21.3 3 17.3 3 12.4c0-2.7 1.1-5.1 2.9-6.9.4 2.8 2.4 5.1 5.1 6.2C10.5 10.7 10 9.5 10 8.2 10 6.2 10.8 4.2 12 2Z" stroke="rgba(241,199,106,.95)" stroke-width="1.2" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <strong>Mujer Fénix</strong>
+        </a>
+        <div class="links">
+          <a href="#servicios">Qué hago</a>
+          <a href="#metodo">Método</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio" class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card pad">
+          <h1>Mujer Fénix</h1>
+          <p class="sub" style="margin:6px 0 12px;">Ana Belén Lozano Moya · Guía en Sombra y Renacimiento Interior</p>
+          <h2 style="margin:0 0 10px; font-size:clamp(22px,3vw,30px); font-weight:600;">Transformación emocional · Sombra · Renacimiento</h2>
+          <p class="sub">Acompaño procesos de renacimiento interno: claridad, límites, deseo, duelo y poder personal — sin humo, sin promesas fáciles.</p>
+
+          <div class="cta-row">
+            <!-- Cambia el número / enlace a tu WhatsApp -->
+            <a class="btn" href="https://wa.me/" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn secondary" href="#contacto">Quiero una sesión</a>
+          </div>
+
+          <div class="pill-row" aria-label="Áreas">
+            <span class="pill">Trabajo con la sombra</span>
+            <span class="pill">Liberación emocional</span>
+            <span class="pill">Tarot terapéutico</span>
+            <span class="pill">Rituales sin esoterismos</span>
+          </div>
+        </div>
+
+        <aside class="card pad side" aria-label="Nota">
+          <h2>Mi enfoque</h2>
+          <p>No uso el tarot para tranquilizarte. Lo uso para que veas dónde te estás mintiendo — y qué paso pequeño, real y valiente toca ahora.</p>
+          <ul>
+            <li>Lenguaje claro, cero dogma.</li>
+            <li>Introspección + acción (cuerpo, límites, decisiones).</li>
+            <li>Confidencialidad y cuidado.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="grid-3">
+        <div class="card pad mini">
+          <h3>Sesión 1:1</h3>
+          <p>Lectura terapéutica (tarot + diálogo) para ordenar un nudo emocional y definir un plan de 7 días.</p>
+        </div>
+        <div class="card pad mini">
+          <h3>Círculo Mujer Fénix</h3>
+          <p>Encuentros íntimos con trabajo guiado: sombra, voz propia, límites y pertenencia sin máscara.</p>
+        </div>
+        <div class="card pad mini">
+          <h3>Taller presencial</h3>
+          <p>Experiencias cortas e intensas: del bloqueo al movimiento. Con práctica y aterrizaje a la vida real.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo">
+      <div class="card pad">
+        <h2 style="margin:0 0 10px; font-size:20px;">Umbral Fénix · Taller 8 semanas</h2>
+        <p class="sub" style="margin:0 0 14px;">Proceso grupal profundo de transformación emocional, trabajo con la sombra y renacimiento interior.</p>
+
+        <div class="grid-3">
+          <div class="mini"><h3>La Caída</h3><p>Estado emocional real, roles heredados y la verdad que ya no se puede ocultar.</p></div>
+          <div class="mini"><h3>El Descenso</h3><p>Caverna interna, miedos raíz, límites y sombra madre. Sostener sin huir.</p></div>
+          <div class="mini"><h3>El Fuego</h3><p>Ruptura consciente, límites Fénix y nueva base interna. Acción clara.</p></div>
+        </div>
+        <div style="height:10px"></div>
+        <div class="grid-3">
+          <div class="mini"><h3>El Renacer</h3><p>Identidad auténtica, coherencia y permiso para ser.</p></div>
+          <div class="mini"><h3>Ascenso</h3><p>Integración, promesa personal y continuidad del camino.</p></div>
+          <div class="mini"><h3>Acompañamiento</h3><p>Llamada individual 45’ (semana 4 y 8) + encuentros grupales.</p></div>
+        </div>
+        <div style="height:12px"></div>
+        <p class="quote">“Lo que se mira, se libera. Lo que se integra, renace.”<span>— Mujer Fénix</span></p>
+      </div>
+    </section>
+
+    <section id="sobre-mi">
+      <div class="hero-grid">
+        <div class="card pad">
+          <h2 style="margin:0 0 10px; font-size:20px;">Sobre mí</h2>
+          <p class="sub" style="margin:0 0 14px;">Ana Belén Lozano Moya · Acompañamiento en Sombra y Renacimiento Interior</p>
+          <p>Acompaño a mujeres y grupos en procesos emocionales profundos desde la Psicología Analítica de C. G. Jung, la mirada simbólica y el tarot terapéutico. Creo espacios seguros para mirar la verdad interna, liberar peso emocional y reconectar con la fuerza esencial.</p>
+          <ul style="margin-top:12px; color:var(--muted)">
+            <li>Tarot Terapéutico y Arquetipos — 70h (Market Cursos)</li>
+            <li>La Psicología de Jung: Un viaje hacia la integración — Marcelo Aguirre Psicología (diploma obtenido)</li>
+            <li>Mindfulness + MBSR — 26,5h</li>
+            <li>Inteligencia Emocional — 5h · Coaching de Vida con PNL — 17,5h</li>
+            <li>Autohipnosis y Neurohacking — 2h</li>
+          </ul>
+        </div>
+        <aside class="card pad side">
+          <h2>Tu foto</h2>
+          <p>Coloca aquí una foto natural y sobria. Sustituye este texto por una imagen <code>&lt;img&gt;</code> cuando quieras.</p>
+          <p class="small">Recomendado: luz natural, fondo neutro, sin simbología.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="hero-grid">
+        <div class="card pad">
+          <h2 style="margin:0 0 10px; font-size:20px;">Contacto</h2>
+          <p class="sub" style="margin:0 0 14px;">Rellena esto y te respondo por WhatsApp o email.</p>
+
+          <!-- Formulario simple: usa mailto (sin backend). Cambia el email. -->
+          <form action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
+            <div>
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="Nombre" autocomplete="name" placeholder="Tu nombre" required />
+            </div>
+            <div>
+              <label for="mensaje">Qué necesitas ahora</label>
+              <textarea id="mensaje" name="Mensaje" placeholder="Cuéntame en 4-6 líneas qué estás viviendo y qué quieres lograr." required></textarea>
+            </div>
+            <button class="btn" type="submit">Enviar</button>
+            <p class="small">Si tu navegador no abre el email, usa el botón de WhatsApp de arriba.</p>
+          </form>
+        </div>
+
+        <aside class="card pad side">
+          <h2>Enlaces</h2>
+          <p class="sub" style="margin:0 0 10px;">Pon aquí tus perfiles (TikTok / Instagram / Facebook).</p>
+          <ul>
+            <li><a href="#" onclick="return false;">TikTok: @mujer_fenix7</a></li>
+            <li><a href="#" onclick="return false;">Facebook: Mujer Fénix</a></li>
+            <li><a href="#" onclick="return false;">Instagram: mujer.fenix</a></li>
+          </ul>
+          <div style="height:10px"></div>
+          <p class="small">*Edita estos enlaces en el HTML cuando tengas las URLs.</p>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap" style="padding:0">
+        <div style="display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap; align-items:center;">
+          <span>© <span id="year"></span> Mujer Fénix</span>
+          <span class="small">Hecho simple, elegante y directo.</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Año automático
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
