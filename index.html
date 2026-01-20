@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Mujer Fénix — transformación emocional, trabajo con la sombra y liderazgo." />
-  <title>Mujer Fénix</title>
+  <meta name="description" content="Mujer Fénix — Umbral Fénix (8 semanas) · transformación emocional, sombra y renacimiento." />
+  <title>Mujer Fénix · Umbral Fénix</title>
   <style>
     :root{
       --bg:#0b0b10;
@@ -54,20 +54,28 @@
     }
     .seal svg{opacity:.9}
     .brand strong{letter-spacing:.4px}
-    .links{display:flex; gap:14px; flex-wrap:wrap;}
+
+    .links{display:flex; gap:10px; flex-wrap:wrap; align-items:center;}
     .links a{
       text-decoration:none;
       color:var(--muted);
       padding:8px 10px;
       border-radius:12px;
       border:1px solid transparent;
+      white-space:nowrap;
     }
     .links a:hover{color:var(--text); border-color:rgba(241,199,106,.25); background:rgba(241,199,106,.06)}
+    .links a.primary{
+      color: rgba(243,243,245,.95);
+      border-color: rgba(241,199,106,.35);
+      background: linear-gradient(135deg, rgba(241,199,106,.18), rgba(241,199,106,.06));
+      font-weight:700;
+    }
 
-    .hero{padding:52px 0 18px;}
+    .hero{padding:46px 0 18px;}
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.25fr .75fr;
+      grid-template-columns: 1.15fr .85fr;
       gap:18px;
       align-items:stretch;
     }
@@ -85,7 +93,8 @@
 
     h1{margin:0 0 10px; font-size: clamp(30px, 4vw, 44px); line-height:1.08; letter-spacing:-.6px;}
     .sub{color:var(--muted); margin:0 0 18px; font-size: 16px;}
-    .pill-row{display:flex; gap:10px; flex-wrap:wrap; margin:16px 0 0;}
+    .small{font-size:12px; color:var(--muted)}
+    .pill-row{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 0;}
     .pill{
       font-size:13px;
       color: rgba(243,243,245,.9);
@@ -95,7 +104,7 @@
       padding:7px 10px;
     }
 
-    .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;}
+    .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
       padding:11px 14px;
@@ -103,20 +112,16 @@
       border:1px solid rgba(241,199,106,.35);
       background: linear-gradient(135deg, rgba(241,199,106,.20), rgba(241,199,106,.08));
       text-decoration:none;
-      font-weight:600;
+      font-weight:700;
     }
     .btn:hover{filter:brightness(1.05)}
     .btn.secondary{
       border-color: rgba(35,35,52,.9);
       background: rgba(255,255,255,.03);
       color: var(--muted);
+      font-weight:650;
     }
     .btn.secondary:hover{color:var(--text); border-color:rgba(241,199,106,.22)}
-
-    .side h2{margin:0 0 10px; font-size:18px;}
-    .side p{margin:0; color:var(--muted);}
-    .side ul{margin:14px 0 0; padding-left:18px; color:var(--muted)}
-    .side li{margin:8px 0}
 
     section{padding:16px 0;}
     .grid-3{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px;}
@@ -133,6 +138,19 @@
       margin:0;
     }
     .quote span{display:block; color:var(--muted); margin-top:8px; font-size:13px}
+
+    .side h2{margin:0 0 10px; font-size:18px;}
+    .side p{margin:0; color:var(--muted);}
+    .side ul{margin:14px 0 0; padding-left:18px; color:var(--muted)}
+    .side li{margin:8px 0}
+
+    .img{
+      width:100%;
+      border-radius:18px;
+      display:block;
+      border:1px solid rgba(35,35,52,.9);
+      background: rgba(0,0,0,.18);
+    }
 
     form{display:grid; gap:10px;}
     label{font-size:13px; color:var(--muted)}
@@ -155,7 +173,6 @@
       border-top:1px solid rgba(35,35,52,.7);
       margin-top:18px;
     }
-    .small{font-size:12px; color:var(--muted)}
 
     /* Pequeña animación del sello */
     @media (prefers-reduced-motion: no-preference){
@@ -165,6 +182,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="wrap">
@@ -173,45 +191,18 @@
           <span class="seal" aria-hidden="true">
             <!-- Sello Fénix minimal (sin simbología brujeril) -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2c1.6 2.1 2.6 4.1 2.6 6.2 0 1.6-.6 3.1-1.5 4.4 2.9-1 5.3-3.1 6.9-6.1.7 2 .9 3.7.9 5.4 0 5.7-4 9.9-8.9 10.1V20c3.3-.4 5.7-3.3 5.2-6.6-.2-1.2-.7-2.2-1.5-3.1-.1 2-1.3 3.8-3.1 4.7-.9.4-1.8.6-2.7.6-1.9 0-3.6-.8-4.8-2.1.2 4.3 3.7 7.8 8 7.8 0 .2 0 .4-.1.7C6.9 21.3 3 17.3 3 12.4c0-2.7 1.1-5.1 2.9-6.9.4 2.8 2.4 5.1 5.1 6.2C10.5 10.7 10 9.5 10 8.2 10 6.2 10.8 4.2 12 2Z" stroke="rgba(241,199,106,.95)" stroke-width="1.2" stroke-linejoin="round"/>
+              <path d="M12 2c1.6 2.1 2.6 4.1 2.6 6.2 0 1.6-.6 3.1-1.5 4.4 2.9-1 5.3-3.1 6.9-6.1.7 2 .9 3.7.9 5.4 0 5.7-4 9.9-8.9 10.1V20c3.3-.4 5.7-3.3 5.2-6.6-.2-1.2-.7-2.2-1.5-3.1-.1 2-1.3 3.8-3.1 4.7-.9.4-1.8.6-2.7.6-1.9 0-3.6-.8-4.8-2.1.2 4.3 3.7 7.8 8 7.8 0 .2 0 .4-.1.7C6.9 21.3 3 17.3 3 12.4c0-2.7 1.1-5.1 2.9-6.9.4 2.8 2.4 5.1 5.1 6.2C10.5 10.7 10 9.5 10 8.2 10 6.2 10.8 4.2 12 2Z"
+                stroke="rgba(241,199,106,.95)" stroke-width="1.2" stroke-linejoin="round"/>
             </svg>
           </span>
           <strong>Mujer Fénix</strong>
         </a>
+
         <div class="links">
-          <a href="#servicios">Qué hago</a>
-          <a href="#metodo">Método</a>
-          <section id="pensamientos">
-  <div class="card pad">
-    <h2>Pensamientos</h2>
-    <p class="sub">Textos escritos desde proceso. No para consumir, sino para resonar.</p>
-
-    <div class="grid-3">
-
-      <a class="card pad mini" href="pensamientos-introduccion.html">
-        <h3>Introducción</h3>
-        <p class="small">Antes de descender, una nota de encuadre.</p>
-      </a>
-
-      <a class="card pad mini" href="pensamientos-ruptura.html">
-        <h3>La ruptura</h3>
-        <p class="small">Cuando sostener deja de ser amor.</p>
-      </a>
-
-      <a class="card pad mini" href="pensamientos-descenso.html">
-        <h3>El descenso</h3>
-        <p class="small">Entrar en la caverna sin linterna.</p>
-      </a>
-
-      <a class="card pad mini" href="pensamientos-renacimiento.html">
-        <h3>El renacimiento</h3>
-        <p class="small">Integrar lo nuevo sin volver atrás.</p>
-      </a>
-
-    </div>
-  </div>
-</section>
-
+          <a class="primary" href="#umbral">Umbral Fénix</a>
+          <a href="#servicios">Sesión 1:1</a>
+          <a href="#pensamientos">Pensamientos</a>
+          <a href="#sobre-mi">Sobre mí</a>
           <a href="#contacto">Contacto</a>
         </div>
       </nav>
@@ -219,98 +210,192 @@
   </header>
 
   <main id="inicio" class="wrap">
+
+    <!-- HERO: Umbral primero -->
     <section class="hero">
       <div class="hero-grid">
         <div class="card pad">
-          <h1>Mujer Fénix</h1>
-          <p class="sub" style="margin:6px 0 6px;">Ana Belén Lozano Moya · Guía en Sombra y Renacimiento Interior</p>
-          <p class="sub" style="font-style:italic;">Este no es un espacio para calmarte. Es un espacio para mirarte.</p>
-          <h2 style="margin:0 0 10px; font-size:clamp(22px,3vw,30px); font-weight:600;">Transformación emocional · Sombra · Renacimiento</h2>
-          <p class="sub">Acompaño procesos de renacimiento interno: claridad, límites, deseo, duelo y poder personal — sin humo, sin promesas fáciles.</p>
+          <div class="pill-row" aria-label="Etiqueta">
+            <span class="pill">Programa grupal · 8 semanas</span>
+            <span class="pill">Sombra · límites · renacimiento</span>
+          </div>
+
+          <h1 style="margin-top:12px;">Umbral Fénix</h1>
+          <p class="sub" style="margin:6px 0 10px;">
+            Un proceso para mujeres que ya no quieren sostenerse desde la máscara.
+          </p>
+
+          <p class="sub" style="margin:0 0 12px; font-style:italic;">
+            No es para “sentirte mejor”. Es para mirarte mejor — y actuar desde ahí.
+          </p>
+
+          <p class="sub" style="margin:0 0 8px;">
+            Trabajo emocional profundo con estructura: claridad, límites, deseo, duelo y poder personal.
+            Sin dogma. Sin promesas fáciles. Con aterrizaje real.
+          </p>
 
           <div class="cta-row">
-            <a class="btn" href="#metodo">Entrar en Umbral Fénix (8 semanas)</a>
-            <a class="btn secondary" href="#servicios">Sesión 1:1</a>
+            <a class="btn" href="#umbral">Ver el programa</a>
+            <a class="btn secondary" href="#contacto">Preguntar / postular</a>
           </div>
 
-          <div class="pill-row" aria-label="Áreas">
-            <span class="pill">Trabajo con la sombra</span>
-            <span class="pill">Liberación emocional</span>
-            <span class="pill">Tarot terapéutico</span>
-            <span class="pill">Rituales sin esoterismos</span>
-          </div>
+          <p class="small" style="margin:12px 0 0;">
+            Si estás en un momento frágil o sin sostén, escríbeme antes de comprar. Prefiero honestidad a impulso.
+          </p>
         </div>
 
-        <aside class="card pad side" aria-label="Nota">
-          <h2>Mi enfoque</h2>
-          <p>No uso el tarot para tranquilizarte. Lo uso para que veas dónde te estás mintiendo — y qué paso pequeño, real y valiente toca ahora.</p>
+        <aside class="card pad side" aria-label="Presentación">
+          <img
+            src="ana.jpg"
+            alt="Ana Belén Lozano Moya · Mujer Fénix"
+            class="img"
+            loading="lazy"
+          />
+          <div style="height:12px"></div>
+          <h2 style="margin:0 0 8px;">Ana Belén Lozano Moya</h2>
+          <p style="margin:0; color:var(--muted);">
+            Guía en sombra y renacimiento interior. Tarot terapéutico + mirada simbólica + acción.
+          </p>
           <ul>
-            <li>Lenguaje claro, cero dogma.</li>
-            <li>Introspección + acción (cuerpo, límites, decisiones).</li>
+            <li>Lenguaje claro, cero humo.</li>
+            <li>Introspección + cuerpo + límites.</li>
             <li>Confidencialidad y cuidado.</li>
           </ul>
         </aside>
       </div>
     </section>
 
+    <!-- UMBRAL (arriba, antes de servicios) -->
+    <section id="umbral">
+      <div class="card pad">
+        <h2 style="margin:0 0 10px; font-size:20px;">Umbral Fénix · 8 semanas</h2>
+        <p class="sub" style="margin:0 0 14px;">
+          Proceso grupal para ordenar el caos interno, mirar la sombra sin huir y construir una base nueva.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="https://buy.stripe.com/14AbJ342dgL77IZ9761gs00" target="_blank" rel="noopener">
+            Pago completo · 280 €
+          </a>
+          <a class="btn secondary" href="https://buy.stripe.com/28EfZj2Y99iFaVb1EE1gs01" target="_blank" rel="noopener">
+            2 pagos · 145 €
+          </a>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="grid-3">
+          <div class="mini">
+            <h3>1) La Caída</h3>
+            <p>Ver el estado emocional real: roles heredados, autoengaños y la verdad que ya no se puede sostener.</p>
+          </div>
+          <div class="mini">
+            <h3>2) El Descenso</h3>
+            <p>Entrar en la caverna: miedo raíz, límites, sombra madre. Sentir sin explicarlo demasiado pronto.</p>
+          </div>
+          <div class="mini">
+            <h3>3) El Fuego</h3>
+            <p>Ruptura consciente: límites Fénix, decisión y acción concreta. Menos promesa, más coherencia.</p>
+          </div>
+        </div>
+
+        <div style="height:10px"></div>
+
+        <div class="grid-3">
+          <div class="mini">
+            <h3>4) El Renacer</h3>
+            <p>Identidad real: permiso para ser, sin volver a la versión que te partía por dentro.</p>
+          </div>
+          <div class="mini">
+            <h3>5) Ascenso</h3>
+            <p>Integración: continuidad, hábitos sostenibles y promesa personal (sin autoexigencia disfrazada).</p>
+          </div>
+          <div class="mini">
+            <h3>Acompañamiento</h3>
+            <p>2 llamadas individuales (45’) + encuentros grupales. Trabajo guiado y aterrizaje semanal.</p>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <p class="quote">
+          “Lo que se mira, se libera. Lo que se integra, renace.”
+          <span style="font-style:italic;">No es motivación. Es proceso, presencia y responsabilidad.</span>
+          <span>— Mujer Fénix</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICIOS (después) -->
     <section id="servicios">
       <div class="grid-3">
         <div class="card pad mini">
           <h3>Sesión 1:1</h3>
-          <p>Lectura terapéutica (tarot + diálogo) para ordenar un nudo emocional y definir un plan de 7 días.</p>
+          <p>Lectura terapéutica (tarot + diálogo) para ordenar un nudo emocional y definir un plan real de 7 días.</p>
+          <div style="height:12px"></div>
+          <a class="btn secondary" href="https://buy.stripe.com/9B63cxdCNcuR2oFaba1gs02" target="_blank" rel="noopener">
+            Reservar · 69 €
+          </a>
         </div>
+
         <div class="card pad mini">
           <h3>Círculo Mujer Fénix</h3>
           <p>Encuentros íntimos con trabajo guiado: sombra, voz propia, límites y pertenencia sin máscara.</p>
         </div>
+
         <div class="card pad mini">
           <h3>Taller presencial</h3>
-          <p>Experiencias cortas e intensas: del bloqueo al movimiento. Con práctica y aterrizaje a la vida real.</p>
+          <p>Experiencias cortas e intensas: del bloqueo al movimiento. Con práctica y aterrizaje a vida real.</p>
         </div>
       </div>
     </section>
 
-    <section id="metodo">
+    <!-- PENSAMIENTOS (sección real, fuera del menú) -->
+    <section id="pensamientos">
       <div class="card pad">
-        <h2 style="margin:0 0 10px; font-size:20px;">Umbral Fénix · Taller 8 semanas</h2>
-        <p class="sub" style="margin:0 0 14px;">Proceso grupal profundo de transformación emocional, trabajo con la sombra y renacimiento interior.</p>
-        <div class="cta-row">
-  <a class="btn" href="https://buy.stripe.com/14AbJ342dgL77IZ9761gs00" target="_blank">
-    Umbral Fénix · Pago completo (280 €)
-  </a>
-  <a class="btn secondary" href="https://buy.stripe.com/28EfZj2Y99iFaVb1EE1gs01" target="_blank">
-    Umbral Fénix · 2 pagos de 145 €
-  </a>
-</div>
-
-<div style="height:14px"></div>
-
-<a class="btn secondary" href="https://buy.stripe.com/9B63cxdCNcuR2oFaba1gs02" target="_blank">
-  Sesión 1:1 · 69 €
-</a>
+        <h2 style="margin:0 0 10px; font-size:20px;">Pensamientos</h2>
+        <p class="sub">Textos escritos desde proceso. No para consumir, sino para resonar.</p>
 
         <div class="grid-3">
-          <div class="mini"><h3>La Caída</h3><p>Estado emocional real, roles heredados y la verdad que ya no se puede ocultar.</p></div>
-          <div class="mini"><h3>El Descenso</h3><p>Caverna interna, miedos raíz, límites y sombra madre. Sostener sin huir.</p></div>
-          <div class="mini"><h3>El Fuego</h3><p>Ruptura consciente, límites Fénix y nueva base interna. Acción clara.</p></div>
+          <a class="card pad mini" href="pensamientos-introduccion.html">
+            <h3>Introducción</h3>
+            <p class="small">Antes de descender, una nota de encuadre.</p>
+          </a>
+
+          <a class="card pad mini" href="pensamientos-ruptura.html">
+            <h3>La ruptura</h3>
+            <p class="small">Cuando sostener deja de ser amor.</p>
+          </a>
+
+          <a class="card pad mini" href="pensamientos-descenso.html">
+            <h3>El descenso</h3>
+            <p class="small">Entrar en la caverna sin linterna.</p>
+          </a>
+
+          <a class="card pad mini" href="pensamientos-renacimiento.html">
+            <h3>El renacimiento</h3>
+            <p class="small">Integrar lo nuevo sin volver atrás.</p>
+          </a>
         </div>
-        <div style="height:10px"></div>
-        <div class="grid-3">
-          <div class="mini"><h3>El Renacer</h3><p>Identidad auténtica, coherencia y permiso para ser.</p></div>
-          <div class="mini"><h3>Ascenso</h3><p>Integración, promesa personal y continuidad del camino.</p></div>
-          <div class="mini"><h3>Acompañamiento</h3><p>Llamada individual 45’ (semana 4 y 8) + encuentros grupales.</p></div>
-        </div>
-        <div style="height:12px"></div>
-        <p class="quote">“Lo que se mira, se libera. Lo que se integra, renace.”<br/><span style="font-style:italic;">No es terapia rápida ni motivación. Es proceso, presencia y responsabilidad personal.</span><span>— Mujer Fénix</span></p>
       </div>
     </section>
 
+    <!-- SOBRE MI -->
     <section id="sobre-mi">
       <div class="hero-grid">
         <div class="card pad">
           <h2 style="margin:0 0 10px; font-size:20px;">Sobre mí</h2>
           <p class="sub" style="margin:0 0 14px;">Ana Belén Lozano Moya · Acompañamiento en Sombra y Renacimiento Interior</p>
-          <p>Acompaño a mujeres y grupos en procesos emocionales profundos desde la Psicología Analítica de C. G. Jung, la mirada simbólica y el tarot terapéutico. Trabajo con lo que duele cuando ya no se puede seguir mirando a otro lado.</p> Creo espacios seguros para mirar la verdad interna, liberar peso emocional y reconectar con la fuerza esencial.</p>
+
+          <p style="margin:0 0 10px;">
+            Acompaño procesos emocionales profundos desde la Psicología Analítica de C. G. Jung, la mirada simbólica y el tarot terapéutico.
+            Trabajo con lo que duele cuando ya no se puede seguir mirando a otro lado.
+          </p>
+
+          <p style="margin:0 0 14px;">
+            Creo espacios cuidados para mirar la verdad interna, liberar peso emocional y volver a elegir sin traicionarte.
+          </p>
+
           <ul style="margin-top:12px; color:var(--muted)">
             <li>Tarot Terapéutico y Arquetipos — 70h (Market Cursos)</li>
             <li>La Psicología de Jung: Un viaje hacia la integración — Marcelo Aguirre Psicología (diploma obtenido)</li>
@@ -319,51 +404,52 @@
             <li>Autohipnosis y Neurohacking — 2h</li>
           </ul>
         </div>
+
         <aside class="card pad side">
-          <h2><img 
-                src="img/ana.jpg" 
-                alt="Ana Belén Lozano Moya · Mujer Fénix"
-                style="width:100%; border-radius:18px; display:block;"
-              >
-          </h2>
-          <p>Coloca aquí una foto natural y sobria. Sustituye este texto por una imagen <code>&lt;img&gt;</code> cuando quieras.</p>
-          <p class="small">Recomendado: luz natural, fondo neutro, sin simbología.</p>
+          <h2 style="margin:0 0 10px;">Cómo trabajo</h2>
+          <p>Una mezcla de símbolo y realidad: nombrar, sentir, decidir y sostener un paso posible.</p>
+          <ul>
+            <li>No hago promesas mágicas.</li>
+            <li>No endulzo lo que pide límite.</li>
+            <li>Te devuelvo claridad y responsabilidad.</li>
+          </ul>
+          <p class="small" style="margin-top:10px;">
+            Si estás esperando “que alguien te salve”, este espacio no es para eso. Si quieres verte y hacerte cargo, sí.
+          </p>
         </aside>
       </div>
     </section>
 
+    <!-- CONTACTO -->
     <section id="contacto">
       <div class="hero-grid">
         <div class="card pad">
           <h2 style="margin:0 0 10px; font-size:20px;">Contacto</h2>
-          <p class="sub" style="margin:0 0 14px;">Rellena esto y te respondo por WhatsApp o email.</p>
+          <p class="sub" style="margin:0 0 14px;">Cuéntame qué estás viviendo y qué necesitas ahora. Te respondo por WhatsApp o email.</p>
 
-          <!-- Formulario simple: usa mailto (sin backend). Cambia el email. -->
           <form action="https://formspree.io/f/mreekldv" method="POST">
-
             <div>
               <label for="nombre">Nombre</label>
               <input id="nombre" name="Nombre" autocomplete="name" placeholder="Tu nombre" required />
             </div>
             <div>
               <label for="mensaje">Qué necesitas ahora</label>
-              <textarea id="mensaje" name="Mensaje" placeholder="Cuéntame en 4-6 líneas qué estás viviendo y qué quieres lograr." required></textarea>
+              <textarea id="mensaje" name="Mensaje" placeholder="En 4–6 líneas: qué está pasando y qué quieres lograr." required></textarea>
             </div>
             <button class="btn" type="submit">Enviar</button>
-            <p class="small">Si tu navegador no abre el email, usa el botón de WhatsApp de arriba.</p>
+            <p class="small">Si prefieres, escríbeme por redes (enlaces a la derecha).</p>
           </form>
         </div>
 
         <aside class="card pad side">
           <h2>Enlaces</h2>
-          <p class="sub" style="margin:0 0 10px;">Pon aquí tus perfiles (TikTok / Instagram / Facebook).</p>
+          <p class="sub" style="margin:0 0 10px;">Mis perfiles:</p>
           <ul>
             <li><a href="https://www.tiktok.com/@mujer_fenix7?lang=es" target="_blank" rel="noopener">TikTok</a></li>
             <li><a href="https://www.facebook.com/profile.php?id=61550642497918" target="_blank" rel="noopener">Facebook</a></li>
           </ul>
-
           <div style="height:10px"></div>
-          <p class="small">*Edita estos enlaces en el HTML cuando tengas las URLs.</p>
+          <p class="small">Si cambias URLs, edítalas aquí en el HTML.</p>
         </aside>
       </div>
     </section>
@@ -372,14 +458,13 @@
       <div class="wrap" style="padding:0">
         <div style="display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap; align-items:center;">
           <span>© <span id="year"></span> Mujer Fénix</span>
-          <span class="small">Mujer Fénix · Sombra, fuego y renacimiento interior.</span>
+          <span class="small">Sombra, fuego y renacimiento interior.</span>
         </div>
       </div>
     </footer>
   </main>
 
   <script>
-    // Año automático
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
